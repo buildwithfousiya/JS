@@ -30,6 +30,3 @@ const course = {
     123: 10
 };
 console.log(course);
-
-const languages = ['Malayalam', 'Hindi']
-console.log(languages[1])
