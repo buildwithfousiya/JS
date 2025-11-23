@@ -69,3 +69,4 @@ console.log(Array.isArray(c)); // ->true
 let x = ["a", "b"];
 let y = "c";
 console.log(x + y);            // -> "a, b" + "c" -> "a, bc" -> a, bc(type coercion)
+
