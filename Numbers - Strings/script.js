@@ -51,5 +51,22 @@ hello`
 console.log(name);         // \n → new line, \t → tab
 
 const firstName = 'how are you';
-const res = firstName.charAt(0).toUpperCase()+ firstName.slice(1);
+const res = firstName.charAt(0).toUpperCase()+ firstName.slice(1); //also can use negative number
 console.log("Hi,"+res);     
+
+const title  = 'JavaScript';
+for(let i=0; i<title.length; i++){   //For loop
+    console.log(title[i])
+}
+
+let j = 0;
+while(j<title.length){
+    console.log(title[j])            //While Loop
+    j++;
+}
+
+let k = 0;
+do{
+    console.log(title[k])            //Do-While Loop
+    k++;
+}while(k<title.length)
