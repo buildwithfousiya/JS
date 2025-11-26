@@ -30,3 +30,28 @@ console.log(fun(1, 4));
 //unary function
 const sqr = a => a ** 2;
 console.log(sqr(4));    
+
+//recursion
+function countDown(n){
+    if (n == 0) {
+        console.log("Go")
+        return;
+    }
+    console.log(n);
+    countDown(n-1)
+}
+
+countDown(3);
+
+//rest parameter
+function sum(...abc) {
+    console.log(abc)
+}
+
+sum(1, 2, 3, 4)
+
+function add(){
+    console.log(arguments)
+}
+
+add("abc", 1, 2)
