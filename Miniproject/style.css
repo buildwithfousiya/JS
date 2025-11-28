@@ -1,0 +1,16 @@
+.center {
+    text-align: center;
+}
+
+.course-card{
+    background-color: rgb(195, 187, 223);
+    padding: 15px;
+    width: 300px;
+    border-radius: 20px;
+}
+
+#course-container{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
