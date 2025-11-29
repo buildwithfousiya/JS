@@ -44,7 +44,8 @@ const formatName = name => name.charAt(0).toUpperCase() + name.slice(1);
 
 function displayCourses(courses) {
     const courseContainer = document.getElementById("course-container");
-    courses.forEach((course) => {
+    courseContainer.innerHTML = "";
+        courses.forEach((course) => {
         const courseUI = `<div class="course-card">
         <h3>${formatName(course.name)}</h3>
         <p>Price: ${course.price}</p>
@@ -80,15 +81,28 @@ function displayTopRatedCourse(arr){
     
 }
 
-const displayCourseCount =() => {
+const displayCourseCount =(courses) => {
     const countContainer = document.getElementById("course-count");
     countContainer.innerText = `${courses.length} courses`;
 };
 
+function getSearchResult(arr, query){
+    const result = arr.filter((item) => {
+        return item.name.includes(query)
+    });
+    displayCourses(result);
+    displayCourseCount(result)
+}
+
+
 function initPage(){
-    displayCourseCount();
+    displayCourseCount(courses);
     displayCourses(courses);
     displayTopRatedCourse(courses);
+    const searchInput = document.querySelector("#search");
+    searchInput.addEventListener("input", (event) => {
+        getSearchResult(courses, event.target.value);
+    });
 }
 
 initPage();
