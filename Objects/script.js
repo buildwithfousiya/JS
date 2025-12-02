@@ -38,3 +38,25 @@ console.log(Object.values(salary).reduce((acc, cu) => acc + cu)); //values
 console.log(Object.keys(salary));                                 //keys
 console.log(Object.entries(salary));                              //multi-dimensional array
 
+const ageData = { age: 18};
+const nameData = { name: "abc"};
+const result = Object.assign({}, ageData, nameData);
+console.log(result, ageData);     //assigned to an empty object.
+const result1= Object.assign(ageData, nameData);
+console.log(result1, ageData);             // combined 2 objects, added to the 1st argument
+
+// Object.seal & Object.freeze
+
+const ageData1 = {age: 26}
+Object.freeze(ageData1)    // can't add/ delet/ modify/ change properties(immutable)
+ageData1.age = 30;
+ageData1.name = "abc";
+console.log(ageData1)
+
+const ageData2 = {age: 20}
+Object.seal(ageData2)     // can modify existing property values, can't delet or add new properties
+ageData2.age = 30;
+ageData2.name = "abc";
+console.log(ageData2)
+
+
